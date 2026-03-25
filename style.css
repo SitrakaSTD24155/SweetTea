@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "SN Pro";
 }
 
 .navbar {
@@ -12,6 +16,7 @@
     background-color: #f8f8f8;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 
 /* LOGO */
 .nom {
@@ -28,6 +33,9 @@
     font-size: 12px;
     color: gray;
 }
+.nom img{
+    width: 50px;
+}
 
 /* MENU */
 .link ul {
@@ -42,10 +50,51 @@
     font-weight: 500;
     transition: 0.3s;
 }
+.link ul li {
+    position: relative;
+}
+
+.link ul li hr {
+    border: none;
+    height: 2px;
+    background-color: green;
+    width: 0%;
+    margin-top: 5px;
+}
+@keyframes underline {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+.link ul li:hover hr {
+    animation: underline 0.4s ease forwards;
+}
 
 .link ul li a:hover {
-    color: green;
+    color: rgb(12, 195, 12);
 }
+
+.input-container {
+    position: relative;
+}
+.icon {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-container input {
+    padding-left: 30px;
+    border-radius: 30px;
+    height: 30px;
+}
+
+
 
 /* BOUTON COMMANDER */
 .commande a {
@@ -77,14 +126,574 @@ body{
     margin-bottom: 300px;
     position: absolute;
     margin-top: -700px;
-    margin-left: 30%;
+    margin-left: 55%;
 }
 .png img{
-    width: 600px;
+    width: 550px;
 }
 
+/* fond haut */
 .fond_haut{
     border: 1px solid black;
     height: 91vh;
     border: none;
+    position: relative;
 }
+
+.entete {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: #222;
+}
+
+.acroche p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.acroche p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    color: green;
+}
+
+
+.bouton button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bouton button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #388E3C, #66BB6A);
+    background-color: #1B5E20;
+    color: white;
+}
+.bouton i {
+    font-size: 15px;
+}
+
+.bouton a {
+    text-decoration: none;
+    color: white;
+}
+
+.fond_haut::before,
+.fond_haut::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 150, 0, 0.15);
+}
+
+.fond_haut::before {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    left: 10%;
+}
+
+.fond_haut::after {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    right: 15%;
+}
+
+
+/* nos produits */
+.produits {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fffafc;
+}
+
+.produits h2 {
+    font-size: 32px;
+    color: #2E7D32;
+    margin-bottom: 40px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produits .card {
+    background: rgb(240, 239, 239);
+    border-radius: 20px;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.produits .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produits .card p {
+    padding: 15px;
+    font-weight: 600;
+}
+
+.produits .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.produits button{
+    width: 30%;
+    aspect-ratio: 1/0.1;
+    background-color: #81C784;
+    border: none;
+    border-radius: 30px;
+}
+
+.produits button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* horaires */
+.horaire {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f1f8f4, #e8f5e9);
+    border-radius: 30px;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.horaire div {
+    max-width: 400px;
+}
+
+.horaire p:first-child {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.horaire p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.horaire img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.horaire div button{
+    width: 200px;
+    height: 40px;
+}
+
+
+/* annonce */
+.annonce {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 50px 40px;
+}
+
+.annonce-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #f1f8f4;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 60%;
+}
+
+.annonce-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.annonce-card img {
+    width: 30%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.annonce-card:hover img {
+    transform: scale(1.05);
+}
+
+.annonce-text {
+    width: 50%;
+}
+
+.annonce-text p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.annonce-text p:last-child {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Inversion pour la classe reverse */
+.annonce-card.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.boisson div img {
+    width: 300px;
+}
+
+.carte{
+    display: flex;
+    align-items: center;
+}
+.boisson .carte div img{
+    width: 20px;
+}
+
+
+
+
+/* Section combo */
+.combo {
+    background: linear-gradient(135deg, #BCEAD5, #E6F7F0); /* vert clair dégradé */
+    margin: 30px auto;
+    padding: 40px 20px;
+    width: 80%;
+    border-radius: 30px;
+    text-align: center;
+    color: #2E7D32; 
+}
+
+.combo h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    width: 220px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .prix {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFAB00;
+}
+
+.prix-box {
+    margin-top: 30px;
+}
+
+.prix-box p {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.prix-box span {
+    font-weight: bold;
+    color: #FFAB00;
+}
+
+.prix-box button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #2E7D32;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prix-box button i {
+    margin-left: 10px;
+}
+
+.prix-box button:hover {
+    background: #1B5E20;
+    transform: scale(1.05);
+}
+
+
+
+
+/* footer */
+.footer {
+    background-color: #3e403e;
+    color: white;
+    padding: 50px 40px 20px;
+    font-family: "SN Pro", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p, .footer ul li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #FFEB3B;
+}
+
+.footer-social .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #FFEB3B;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+
+
+
+/* menu */
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SN Pro", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sp1 { color: green; font-size: 20px; font-weight: bold; }
+.sp2 { font-size: 12px; color: gray; }
+
+.link ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link ul li a:hover { color: #2E7D32; }
+
+.commande a {
+    background-color: #2E7D32;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.commande a:hover { background-color: #1B5E20; }
+
+/* Hero */
+.hero-menu {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #BCEAD5, #E6F7F0);
+    color: #2E7D32;
+}
+
+.hero-menu h1 { font-size: 36px; margin-bottom: 10px; }
+.hero-menu p { font-size: 18px; }
+
+/* Menu sections */
+.menu-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    color: #2E7D32;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    width: 220px;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card .description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card .prix {
+    font-weight: bold;
+    color: #FFAB00;
+}
+
+
+.menu-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.menu-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/logo.jpg'); /* Mets ici le chemin de ton image */
+    background-size: cover;   /* L'image couvre toute la section */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;            /* Transparence, tu peux ajuster */
+    z-index: 0;               /* Derrière le contenu */
+}
+
+.menu-section > .menu-section {
+    position: relative;
+    z-index: 1;
+}
+
