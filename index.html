@@ -16,15 +16,20 @@
 
         <div class="link">
             <ul>
-                <li><a href="#">HOME</a> <hr></li>
-                <li><a href="#">ABOUT US</a><hr></li>
+                <li><a href="index.html">HOME</a> <hr></li>
                 <li><a href="menu.html">MENU</a><hr></li>
+                <li><a href="#">ABOUT US</a><hr></li>
                 <li><a href="#">CONTACT</a><hr></li>
+
                 <div class="input-container">
                     <input type="text" placeholder="Sweet Tea...">
-                    <i class="fa-solid fa-cart-plus"></i>
+                    <i class="fa-solid fa-mug-hot"></i>
                 </div>
-                <li class="commande"><a href="#">COMMANDER</a></li>
+
+                <div class="commande">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="badge">+</span>
+                </div>
             </ul>
         </div>
     </div>
@@ -34,7 +39,7 @@
             <div class="entete">
                 <div class="acroche">
                     <p>WELCOME TO OUR SWeeT FAMILY !</p>
-                    <p>Bubble Tea Shop</p>
+                    <p>--Bubble Tea Shop--</p>
                     <p>Antaninarenina - Ambatobe - Behoririka</p>
                 </div>
 
@@ -71,7 +76,10 @@
                     <img src="images/coca et fanta.jpg" alt="">
                 </div>
             </div>
-            <button><a href="menu.html">Decouvrir nos large choix dans le Menu<i class="fa-solid fa-arrow-right"></i></a></button>
+            <a href="menu.html" class="btn-menu">
+                Decouvrir nos large choix dans le Menu 
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </section>
 
         <section class="horaire">
@@ -84,7 +92,7 @@
                 <p>Dimanche : 10h - 18h</p>
                 <p><i class="fas fa-map-marker-alt"></i> Adresse : Antaninarenina / Ambatobe / Behoririka</p>
                 <button class="btn-map">
-                    <i class="fas fa-map-marker-alt"></i> Trouver-Nous
+                    <i class="fa-regular fa-map"></i> Trouver-Nous
                 </button>
             </div>
             <div>
@@ -100,6 +108,10 @@
                 <input type="date">
                 <input type="time">
                 <input type="text" placeholder="Nom / Pseudo">
+                <div class="input-icon">
+                    <input type="text" placeholder="Numero telephone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
 
                 <button>
                     Réserver maintenant <i class="fa-solid fa-calendar-check"></i>
@@ -112,7 +124,11 @@
                 <img src="images/family.jpg" alt="Family enjoying bubble tea">
                 <div class="annonce-text">
                     <p>Share a Sweet Tea with your Sweet friend</p>
-                    <p>Moments become better with bubble tea</p>
+                    <p>--Moments become better with bubble tea--</p>
+                     <div class="icone">
+                        <div class="fb"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
                 </div>
             </div>
 
@@ -120,7 +136,11 @@
                 <img src="images/girls.jpg" alt="Friends enjoying bubble tea">
                 <div class="annonce-text">
                     <p>Fun moments with bubble tea</p>
-                    <p>Delicious drinks for every occasion</p>
+                    <p>--Delicious drinks for every occasion--</p>
+                    <div class="icone">
+                        <div class="fb"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -165,9 +185,9 @@
         <div class="footer-links">
             <h4>Liens utiles</h4>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">About us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
@@ -181,10 +201,9 @@
 
         <div class="footer-social">
             <h4>Suivez-nous</h4>
-            <div class="social-icons">
-                <a href="#"><a href="https://www.facebook.com/profile.php?id=61555060810753"><i class="fab fa-facebook-f"></i></a></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="social-icons"></i>
+                <a href="https://www.facebook.com/profile.php?id=61555060810753" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sweet.teaantaninarenina/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -193,5 +212,7 @@
         <p>© 2026 SWEET TEA by Family. Tous droits réservés.</p>
     </div>
 </footer>
+
 </body>
+
 </html>
