@@ -3,20 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Tea</title>
+    <title>SWEET TEA by Family</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
+    <div class="navbar">
+        <div class="nom">
+            <div><img src="images/logo png.png" alt=""></div>
+        </div>
 
-    </header>
+        <div class="link">
+            <ul>
+                <li><a href="index.html">HOME</a> <hr></li>
+                <li><a href="menu.html">MENU</a><hr></li>
+                <li><a href="#">ABOUT US</a><hr></li>
+                <li><a href="#">CONTACT</a><hr></li>
 
+                <div class="input-container">
+                    <input type="text" placeholder="Sweet Tea...">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+
+                <div class="commande">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="badge">+</span>
+                </div>
+            </ul>
+        </div>
+    </div>
+    
     <main>
+        <section class="fond_haut">
+            <div class="entete">
+                <div class="acroche">
+                    <p>WELCOME TO OUR SWeeT FAMILY !</p>
+                    <p>--Bubble Tea Shop--</p>
+                    <p>Antaninarenina - Ambatobe - Behoririka</p>
+                </div>
 
+                <div class="bouton">
+                    <button><a href="menu.html">Voir le Menu<i class="fa-solid fa-arrow-right"></i></a> </button>
+                </div>
+            </div> 
+
+            <div class="grand">
+                <img src="images/fond_haut1.jpg" alt="">
+            </div>
+            <div class="png">
+                <img src="images/bubble-milk-tea-pearl-milk-tea-png.png" alt="">
+            </div>
+        </section>
+
+        <section class="produits">
+            <h2>Nos produits</h2>
+            <div class="details">
+                <div class="card">
+                    <p>Bubble tea</p>
+                    <img src="images/chocolat.jpg" alt="">
+                </div>
+                <div class="card">
+                    <p>Soupe</p>
+                    <img src="images/ramen.jpg" alt="">
+                </div>
+                <div class="card">
+                    <p>Pâtisserie</p>
+                    <img src="images/mille feuille.jpg" alt="">
+                </div>
+                <div class="card">
+                    <p>Boissons Gazeuses</p>
+                    <img src="images/coca et fanta.jpg" alt="">
+                </div>
+            </div>
+            <a href="menu.html" class="btn-menu">
+                Decouvrir nos large choix dans le Menu 
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <section class="horaire">
+            <div>
+                <img src="images/téléchargement (1).jpg" alt="">
+            </div>
+            <div>
+                <p>Heure d'ouverture</p>
+                <p>Lundi - Samedi : 8h - 18h</p>
+                <p>Dimanche : 10h - 18h</p>
+                <p><i class="fas fa-map-marker-alt"></i> Adresse : Antaninarenina / Ambatobe / Behoririka</p>
+                <button class="btn-map">
+                    <i class="fa-regular fa-map"></i> Trouver-Nous
+                </button>
+            </div>
+            <div>
+                <img src="images/local.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="reservation">
+            <div>
+                <h2>🍵 Réservez votre moment sucré</h2>
+            </div>    
+            <div class="reservation-box">
+                <input type="date">
+                <input type="time">
+                <input type="text" placeholder="Nom / Pseudo">
+                <div class="input-icon">
+                    <input type="text" placeholder="Numero telephone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <button>
+                    Réserver maintenant <i class="fa-solid fa-calendar-check"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="annonce">
+            <div class="annonce-card">
+                <img src="images/family.jpg" alt="Family enjoying bubble tea">
+                <div class="annonce-text">
+                    <p>Share a Sweet Tea with your Sweet friend</p>
+                    <p>--Moments become better with bubble tea--</p>
+                     <div class="icone">
+                        <div class="fb"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="annonce-card reverse">
+                <img src="images/girls.jpg" alt="Friends enjoying bubble tea">
+                <div class="annonce-text">
+                    <p>Fun moments with bubble tea</p>
+                    <p>--Delicious drinks for every occasion--</p>
+                    <div class="icone">
+                        <div class="fb"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="combo">
+            <h2>✨ Combo Parfait</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="images/fraise.jpg" alt="Bubble Tea Fraise">
+                    <h3>Bubble Tea Fraise</h3>
+                    <p class="prix">15.000 AR</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/ramen.jpg" alt="Ramen au porc">
+                    <h3>Ramen au porc</h3>
+                    <p class="prix">18.000 AR</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/patte a chou 2.jpg" alt="Pâte à choux">
+                    <h3>Pâte à choux</h3>
+                    <p class="prix">8.000 AR</p>
+                </div>
+            </div>
+
+            <div class="prix-box">
+                <p>Seulement <span>40.000 AR</span></p>
+                <button>Commander maintenant <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        
-    </footer>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>SWEET TEA by Family</h3>
+            <p>Votre bubble tea préféré à Antaninarenina. Moments sucrés et conviviaux avec vos amis et votre famille.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 Antaninarenina - Ambatobe - Behoririka</p>
+            <p>📞 +261 34 12 345 67</p>
+            <p>✉️ contact@sweettea.mg</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons"></i>
+                <a href="https://www.facebook.com/profile.php?id=61555060810753" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sweet.teaantaninarenina/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 SWEET TEA by Family. Tous droits réservés.</p>
+    </div>
+</footer>
+
 </body>
+
 </html>

@@ -1,5 +1,1152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "SN Pro";
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: auto;
+}
+
+/* logo */
+.nom img{
+    width: 50px;
+}
+
+
+/* MENU */
+.link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.link ul li {
+    position: relative;
+}
+
+.link ul li hr {
+    border: none;
+    height: 2px;
+    background-color: green;
+    width: 0%;
+    margin-top: 5px;
+}
+@keyframes underline {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+.link ul li:hover hr {
+    animation: underline 0.4s ease forwards;
+}
+
+.link ul li a:hover {
+    color: rgb(12, 195, 12);
+}
+
+/* placeholder */
+.input-container {
+    position: relative;
+    height: 30px;
+}
+.input-container i {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-container input {
+    padding-left: 30px;
+    border-radius: 30px;
+    height: 100%;
+}
+
+
+/* BOUTON cart*/
+.commande {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 128, 0, 0.3); /* vert transparent */
+    border-radius: 50%; /* rond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* icône */
+.commande i {
+    color: green;
+    font-size: 20px;
+}
+
+/* badge + */
+.commande .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: yellow;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* premier impression du landing page */
+.grand{
+    opacity: 0.1;
+    width: auto;
+    position: relative;
+}
+.grand img{
+    width: 100%;
+    height: 91vh;
+    object-fit: cover;
+}
+body{
+    align-items: center;
+}
+.png{
+    z-index: 1100;
+    margin-bottom: 300px;
+    position: absolute;
+    margin-top: -700px;
+    margin-left: 55%;
+}
+.png img{
+    width: 550px;
+}
+
+/* fond haut */
+.fond_haut{
+    border: 1px solid black;
+    height: 91vh;
+    border: none;
+    position: relative;
+}
+
+.entete {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: #222;
+}
+
+.acroche p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.acroche p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    color: green;
+}
+
+
+.bouton button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background-color: rgba(255, 215, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bouton button:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 215, 0, 1);
+}
+.bouton i {
+    font-size: 15px;
+}
+
+.bouton a {
+    text-decoration: none;
+    color: black;
+}
+
+.fond_haut::before,
+.fond_haut::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 150, 0, 0.15);
+}
+
+.fond_haut::before {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    left: 10%;
+}
+
+.fond_haut::after {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    right: 15%;
+    background-color: rgba(210, 140, 70, 0.5);
+}
+
+
+
+/* nos produits */
+.produits {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fffafc;
+}
+
+.produits h2 {
+    font-size: 32px;
+    color: #2E7D32;
+    margin-bottom: 40px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produits .card {
+    background: rgb(240, 239, 239);
+    border-radius: 20px;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.produits .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produits .card p {
+    padding: 15px;
+    font-weight: 600;
+}
+
+.produits .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.btn-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 25px;
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(67, 160, 71, 0.4);
+}
+
+.btn-menu i {
+    transition: transform 0.3s ease;
+}
+
+.btn-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(67, 160, 71, 0.6);
+}
+
+.btn-menu:hover i {
+    transform: translateX(5px);
+}
+
+
+/* horaires */
+.horaire {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f1f8f4, #e8f5e9);
+    border-radius: 30px;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.horaire div {
+    max-width: 400px;
+}
+
+.horaire p:first-child {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.horaire p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.horaire img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.horaire div button{
+    width: 200px;
+    height: 40px;
+}
+
+.btn-map {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #FF4081, #FF80AB);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.btn-map:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.6);
+}
+
+/* effet glow animé */
+.btn-map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: 0.5s;
+}
+
+.btn-map:hover::before {
+    left: 100%;
+}
+
+
+
+/* reservsation */
+.reservation {
+    background: linear-gradient(135deg, #4e654f, #446946);
+    padding: 40px 10px;
+    text-align: center;
+    color: white;
+}
+
+.reservation h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.reservation-box {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+}
+
+.reservation-box input {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.reservation-box button {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #FFAB00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reservation-box button:hover {
+    background: #ff8f00;
+    transform: scale(1.05);
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.input-icon i {
+    color: rgb(85, 85, 85);
+}
+
+.input-icon input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+/* annonce */
+.annonce {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 10px ;
+}
+
+.annonce-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #f1f8f4;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 60%;
+}
+
+.annonce-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.annonce-card img {
+    width: 30%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.annonce-card:hover img {
+    transform: scale(1.05);
+}
+
+.annonce-text {
+    width: 50%;
+}
+
+.annonce-text p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.annonce-text p:last-child {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Inversion pour la classe reverse */
+.annonce-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.annonce-text i {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.icone{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fb:hover{
+    color: #1877F2;
+}
+
+.insta:hover{
+    color: #E1306C;
+}
+
+
+/* Section combo */
+.combo {
+    background: linear-gradient(135deg, #BCEAD5, #E6F7F0); /* vert clair dégradé */
+    margin: 30px auto;
+    padding: 40px 20px;
+    width: 80%;
+    border-radius: 30px;
+    text-align: center;
+    color: #2E7D32; 
+}
+
+.combo h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    width: 220px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .prix {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFAB00;
+}
+
+.prix-box {
+    margin-top: 30px;
+}
+
+.prix-box p {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.prix-box span {
+    font-weight: bold;
+    color: #FFAB00;
+}
+
+.prix-box button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #2E7D32;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prix-box button i {
+    margin-left: 10px;
+}
+
+.prix-box button:hover {
+    background: #1B5E20;
+    transform: scale(1.05);
+}
+
+
+
+/* footer */
+.footer {
+    background-color: #3e403e;
+    color: white;
+    padding: 2% 3% 2%;
+    font-family: "SN Pro", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 2%;
+}
+
+.footer h4 {
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+
+.footer p, .footer ul li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #FFEB3B;
+}
+
+.footer-social .social-icons a {
+    display: inline-block;
+    margin-right: 1%;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #FFEB3B;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 2%;
+}
+/* responive de home page */
+/* Responsive pour les écrans <= 470px */
+@media screen and (max-width: 470px) {
+
+    /* Navbar plus petite */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /* Logo + input sur la première ligne */
+    .navbar > .nom,
+    .input-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nom img {
+        width: 40px; /* logo plus petit */
+    }
+
+    .input-container {
+        height: 30px;
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding-left: 10px;
+        height: 100%;
+    }
+
+    /* Menu et commande sur une seule ligne horizontale */
+    .link ul {
+        flex-direction: row; /* horizontal */
+        flex-wrap: wrap;     /* si espace insuffisant, passe à la ligne */
+        gap: 15px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .link ul li {
+        width: auto;
+    }
+
+    .commande {
+        position: relative;
+        margin-left: auto; /* bouton cart à droite */
+    }
+
+    .link ul li hr {
+        display: none; /* pour simplifier sur mobile */
+    }
+
+    .link ul li a {
+        font-size: 14px; /* un peu plus petit */
+    }
+
+    /* Fond haut */
+    .fond_haut {
+        height: 60vh;
+    }
+
+    .grand img {
+        height: 50vh;
+    }
+
+    .png {
+        content: url('images/bubble-milk-tea-pearl-milk-tea2-png.png');
+        width: 50%;
+        margin-top: -85%;
+        margin-left: 50%;
+    }
+
+    .entete {
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .acroche p:first-child {
+        font-size: 28px;
+    }
+
+    .acroche p {
+        font-size: 16px;
+    }
+
+    .bouton button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Produits */
+    .details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .produits .card {
+        width: 90%;
+    }
+
+    .btn-menu {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Horaire */
+    .horaire {
+        flex-direction: column;
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .horaire img {
+        width: 100%;
+    }
+
+    .horaire div button {
+        width: 100%;
+    }
+
+    /* Combo */
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 60%;
+    }
+
+    /* Reservation */
+    .reservation-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    /* Annonce */
+    .annonce {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .annonce-card {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .annonce-card.reverse {
+        flex-direction: column;
+    }
+
+    .annonce-card img {
+        width: 100%;
+    }
+
+    .annonce-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-social .social-icons a {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+
+
+/* menu */
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SN Pro", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sp1 { color: green; font-size: 20px; font-weight: bold; }
+.sp2 { font-size: 12px; color: gray; }
+
+.link ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link ul li a:hover { color: #2E7D32; }
+
+.commande a {
+    background-color: #2E7D32;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.commande a:hover { background-color: #1B5E20; }
+
+/* Hero */
+.hero-menu {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #BCEAD5, #E6F7F0);
+    color: #2E7D32;
+}
+
+.hero-menu h1 { font-size: 36px; margin-bottom: 10px; }
+.hero-menu p { font-size: 18px; }
+
+/* Menu sections */
+.menu-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    color: #2E7D32;
+    margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    width: 220px;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card .description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card .prix {
+    font-weight: bold;
+    color: #FFAB00;
+}
+
+
+.menu-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.menu-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/logo.jpg'); /* Mets ici le chemin de ton image */
+    background-size: cover;   /* L'image couvre toute la section */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;            /* Transparence, tu peux ajuster */
+    z-index: 0;               /* Derrière le contenu */
+}
+
+.menu-section > .menu-section {
+    position: relative;
+    z-index: 1;
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #2E7D32, #66BB6A);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn i {
+    margin-left: 5px;
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #1B5E20, #4CAF50);
+}
+
+/* Responsive pour écrans <= 470px */
+@media screen and (max-width: 470px) {
+
+    /* Navbar plus petite */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /* Logo + input sur la première ligne */
+    .navbar > .nom,
+    .input-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nom img {
+        width: 40px; /* logo plus petit */
+    }
+
+    .input-container {
+        height: 30px;
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding-left: 10px;
+        height: 100%;
+    }
+
+    /* Menu et commande sur une seule ligne horizontale */
+    .link ul {
+        flex-direction: row; /* horizontal */
+        flex-wrap: wrap;     /* si espace insuffisant, passe à la ligne */
+        gap: 15px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .link ul li {
+        width: auto;
+    }
+
+    .commande {
+        position: relative;
+        margin-left: auto; /* bouton cart à droite */
+    }
+
+    .link ul li hr {
+        display: none; /* pour simplifier sur mobile */
+    }
+
+    .link ul li a {
+        font-size: 14px; /* un peu plus petit */
+    }
+
+    /* Hero section */
+    .hero-menu {
+        padding: 40px 15px;
+    }
+
+    .hero-menu h1 {
+        font-size: 28px;
+    }
+
+    .hero-menu p {
+        font-size: 16px;
+    }
+
+    /* Menu sections */
+    .menu-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Cards */
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card .description {
+        font-size: 13px;
+    }
+
+    .card .prix {
+        font-size: 14px;
+    }
+
+    .buy-btn {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    /* Menu section background */
+    .menu-section::before {
+        opacity: 0.1; /* un peu plus discret sur mobile */
+    }
 }
